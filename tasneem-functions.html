@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functions</title>
+</head>
+<body>
+    <div id="appOne"></div>
+    <div id="appTwo"></div>
+    <div id="appThree"></div>
+    <div id="appFour"></div>
+    <div id=""></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  
+    <script type="text/jsx">
+    
+        function welcome(elementId, name) {
+
+        const app = document.getElementById(elementId);
+        ReactDOM.render( <h1> Hi {name}, We are now going to Learn Javascript Functions </h1>, app);
+       
+    }
+        function welcomeUser(username) {
+            return "Welcome to my page, " +  username;
+          }
+      
+          const samina = welcomeUser("Samina");
+          const tasneem = welcomeUser("Tasneem");
+          const arshiya = welcomeUser("Arshiya");
+          const muskan = welcomeUser("Muskan");
+      
+          console.log(samina, tasneem, arshiya, muskan);
+      
+      
+            welcome("appOne", samina);
+            welcome("appTwo", muskan);
+            welcome("appThree", arshiya);
+            welcome("appFour", tasneem);
+        
+        </script>
+</body>
+</html>
