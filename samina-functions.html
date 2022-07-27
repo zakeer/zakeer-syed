@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Function | Zakeer</title>
+</head>
+<body>
+
+  <div id="appOne"></div>
+  <div id="appTwo"></div>
+  <div id="appThree"></div>
+  <div id="appFour"></div>
+
+
+  <div id=""></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/jsx">
+    function execute(elementId, name) { // elementId = "appOne"
+      console.log("checking for elementId", elementId);
+      console.log("checking for name parameter = ", name);
+
+      const app = document.getElementById(elementId); // <div id="appTwo"></div>
+      ReactDOM.render(<h1>Hi {name}, We now going to Learn Javascript Functions</h1>, app);
+      var a = 100;
+      var user = {}
+
+      console.log(a);
+      console.log(user);
+      
+    }
+
+    
+
+
+    function welcomeUser(username) {
+      return "Welcome to my page, " +  username;
+    }
+
+    const samina = welcomeUser("Samina");
+    const tasneem = welcomeUser("Tasneem");
+    const arshiya = welcomeUser("Arshiya");
+    const muskan = welcomeUser("Muskan");
+
+    console.log(samina, tasneem, arshiya, muskan);
+
+
+    execute("appOne", samina)
+    execute("appTwo", muskan)
+    execute("appThree", arshiya)
+    execute("appFour", tasneem);
+      
+    function addNumbers(a,b){
+        return a+b;
+    }
+    const result = addNumbers(2,3);
+    console.log(result);
+
+    
+    function makeBread(qty) {
+        return '🍞'.repeat(qty)
+    }
+    const breakfast = makeBread(10);
+    console.log(breakfast);
+    
+    
+    function add(){
+        if(arguments.length == 0){
+            console.log("No argument passed!");
+        }else{
+            let sum = 0;
+            for(let i=0; i<arguments.length; i++){
+                sum=sum+arguments[i];
+            }
+            console.log(sum);
+        }
+    }
+    add(2);
+    add(2,3);
+    add(2,3,4);
+
+    function makeBreakfast(main, side, drink) {
+        console.log(arguments)
+        return `Breakfast is ${main}, ${side}, and ${drink}.`;
+    }
+    makeBreakfast('🥞', '🥓', '🥛');
+  </script>
+</body>
+</html>
