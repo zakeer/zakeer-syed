@@ -1,0 +1,61 @@
+<html>
+  <body>
+    <div id="appone"></div>
+    <div id="apptwo"></div>
+    <div id="appthree"></div>
+    <div id="appfour"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Script -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      
+     function execute( elementId , name ) {
+        const app = document.getElementById(elementId);
+        console.log("checking for the elementId" , elementId);
+        console.log("checking for the name parameter" , name);
+        ReactDOM.render(<h1> Hi {name} We are now going to learn Javascript function..!!</h1>, app);
+        return "first message" 
+        var a = 100;
+        var user = {}
+  
+        console.log(a);
+        console.log(user);
+      }
+      
+function welcomeUser(username){
+    return "Welcome to my new page," + username ;
+}
+
+const muskan = welcomeUser("Muskan");
+const zoya = welcomeUser("Zoya");
+const sani = welcomeUser("Sani");
+const abhi = welcomeUser("Abhi");
+ 
+console.log(muskan ,  zoya, sani , abhi);
+
+
+      execute("appone" , muskan);
+      execute("apptwo" , "Zoya");
+      execute("appthree" , "Sani");
+      execute("appfour" , abhi);
+
+      function sayhi(name){
+        console.log("hey" , name);
+      }
+sayhi("Muskan");
+sayhi("Zoya");
+ 
+       const sayHello = function(name){
+        console.log("Hellow" , name);
+       }
+      sayHello("Sani");
+      sayHello("Abhi");
+       
+     const sayWelcome = (name) => {
+        console.log("Welcome" , name);
+     }
+     sayWelcome("Muskan");
+    </script>
+  </body>
+</html>
