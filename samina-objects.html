@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>OBJECTS</h1>
+    <script>
+    const person = {
+        firstName:'Samina',
+        lastName:'Moghal',
+        age:24,
+        country:'India',
+        city:'Guntur',
+        skills: [
+          'HTML',
+          'CSS',
+          'Javascript',
+          'React'
+        ],
+        getFullName: function() {
+          return `${this.firstName} ${this.lastName}`
+        }
+      }
+      console.log(person.firstName);
+      console.log(person.lastName);
+      console.log(person.age);
+      console.log(person.city);
+      console.log(person.skills[2]);
+      console.log(person.getFullName());
+
+      person.phoneNumber ='23456789';
+      console.log(person.phoneNumber);
+
+      const keys = Object.keys(person)
+      console.log(keys);
+      const value = Object.values(person)
+      console.log(value); 
+      const entries = Object.entries(person)
+      console.log(entries);
+
+      const copyPerson = Object.assign({}, person)
+      console.log(copyPerson);
+      
+      console.log("*************hasOwnProperty()************")
+      console.log(copyPerson.hasOwnProperty('firstName'));
+      console.log(copyPerson.hasOwnProperty('Qualification'));
+
+
+      console.log("**********Freeze() Property***********");
+      const obj = {
+         prop: 42
+      };
+      Object.freeze(obj);
+      obj.prop = 33;
+      console.log(obj.prop);
+    </script>
+</body>
+</html>
