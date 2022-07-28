@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Component | Zakeer</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+  <script type="text/jsx">
+    const domElement = document.getElementById("app");
+
+    function Header() {
+      return <header>
+        <Logo></Logo> 
+        <Title /> 
+        <Nav></Nav>
+      </header>
+    }
+
+    function Logo() {
+      return <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png" />
+    }
+
+    function Title() {
+      return <h1>NextJS Training</h1>
+    }
+
+    function Nav() {
+      return <ul>
+        <li>Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+      </ul>
+    }
+
+    function Article() {
+      return <section>THis is article section</section>
+    }
+
+    function Footer() {
+      return (<footer>This is page footer</footer>)
+    }
+
+    function HomePage() {
+      return <div>
+        <Header />
+        <Article />
+        <Footer />
+      </div>
+    }
+
+    
+    ReactDOM.render(<HomePage />, domElement);
+  </script>
+</body>
+</html>
