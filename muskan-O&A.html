@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example's of Javascript Object's and Array's</title>
+</head>
+<body>
+    <h1>Document of Javascript Object's and Array's </h1>
+    <div id="objects"></div>
+    <div id="functions"></div>
+    <div id="topic"></div>
+
+     <div id="ArrayMap"></div>
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type = "text/jsx">
+       
+
+       var name = "Muskan";
+       var age = 21 ; 
+       var student = true ;
+       var city = "Hyderabad";
+       var designation = "Student";
+
+       const profile = {
+        name : 'Muskan',
+        age : '21',
+        student : 'true',
+        city : 'Hyderabad',
+        designation : 'Student'
+       }
+
+       console.log(profile);
+       console.log(profile.name);
+       console.log(profile['age']);
+       console.log(profile[age]);
+
+       const key = 'student';
+       console.log( profile[key] );
+        
+       const output = 
+       <ol> 
+        <li>Name : {profile.name} </li>
+        <li>Age : {profile.age}</li>
+        <li>Student : {profile.student} </li>
+        <li>City : {profile.city}</li>  </ol>  
+
+        ReactDOM.render(output , document.getElementById("objects"));
+        ReactDOM.render(output , document.getElementById("functions"));
+        ReactDOM.render(output , document.getElementById("topic"));
+        
+      
+       
+    </script>
+
+   <script type="text/jsx">
+    
+    const type1 = {
+        fruit : "Apple",
+        wt : 10 ,
+    }
+    const type2 = {
+        fruit : "Oranges",
+        wt : 5 ,
+    }
+    const type3 = {
+        fruit : "Kiwi",
+        wt : 1 ,
+    }
+    
+    const numbers = [1,2,3,4]
+    const strings = ["Apple" , "Oranges" , "Kiwi"]
+    const typeList = [type1 ,  type2 , type3 , {fruit:"Melon" , wt:2 }];
+    console.log(typeList);
+     
+ ReactDOM.render(<div> 
+   {typeList.map(type => <ul>
+    <li> Fruit: {type.fruit}</li>
+    <li> wt: {type.wt}</li> </ul> )} 
+
+
+</div>, document.getElementById("ArrayMap"))
+
+   </script>
+
+
+
+
+
+</body>
+</html>
+
+
+
+
