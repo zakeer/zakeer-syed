@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript Objects & Array Methods | Samina</title>
+</head>
+<body>
+
+  <h2>Javascript Objects & Array Methods | Samina </h2>
+
+  <div id="objects"></div>
+  <div id="functions"></div>
+  <div id="root"></div>
+
+
+  <div id="arrayMapElement"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/jsx">
+
+    const a = 10;
+    console.log(a); 
+    console.log('a'); 
+
+    var name = "samina"; 
+    var age = 24;
+    var married = false;
+    const user = {
+      name: 'samina moghal',
+      age: 24,
+      married: false,
+      qualification: 'B.Tech',
+      city: 'Guntur'
+    }
+    console.log(user);
+    console.log(user.name);
+    console.log(user[age]); 
+    console.log(user['age']); 
+
+    const key = 'married';
+    console.log( user[key] );
+
+    const ulElement = <ul>
+      <li>Name: {user.name}</li>
+      <li>Age: {user.age}</li>
+      <li>Married: {user.married}</li>
+      <li>qualification: {user.qualification}</li>
+      <li>City: {user.city}</li>
+    </ul>
+
+    ReactDOM.render(ulElement, document.getElementById("objects"));
+    ReactDOM.render(ulElement, document.getElementById("functions"));
+    ReactDOM.render(ulElement, document.getElementById("root"));
+
+</script>
+
+
+<script type="text/jsx">
+
+    const user1 = {
+      name: 'personOne',
+      age: 30,
+      city:'Guntur'
+    }
+
+    const user2 = {
+      name: 'personTwo',
+      age: 28,
+      city:'Guntur'
+    }
+
+    const user3 = {
+      name: 'personThree',
+      age: 24,
+      city:'Guntur'
+    }
+
+    const numbers = [1, 2, 3, 4];
+    const strings = ['moghal', "samina", 'begam']
+    const usersList = [user1, user2, user3, { name: 'personfour', age: 25, city:'Guntur' }];
+
+    console.log(usersList);
+
+    ReactDOM.render(<div>
+      { usersList.map(user => <ul>
+        <li>Name: {user.name}</li>
+        <li>Age: {user.age}</li>
+        <li>City:{user.city}</li>
+      </ul>) }
+    </div>, document.getElementById("arrayMapElement"))
+
+  </script>
+  
+</body>
+</html>
