@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript object and array methods</title>
+</head>
+<body>
+   <h3>JAVASCRIPT OBJECT & ARRAY METHODS</h3> 
+   <div id = "arrayMapElement"></div>
+   <div id="objects"></div>
+   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/jsx">
+    const user1 = {
+        name: 'Tasneem',
+        age: 32
+      }
+  
+      const user2 = {
+        name: 'Suhel',
+        age: 31
+      }
+  
+      const user3 = {
+        name: 'Vaseem',
+        age: 29
+      }
+      const usersList = [user1, user2, user3];
+      console.log(usersList);
+
+    ReactDOM.render(<div>
+      { usersList.map(user => <ul>
+        <li>Name: {user.name}</li>
+        <li>Age: {user.age}</li>
+      </ul>) }
+    </div>, document.getElementById("arrayMapElement"))
+    const user = {
+        name: 'Syed Tasneem Kouser',
+        age: 32,
+        married: true,
+        designation: 'Developer',
+        city: 'Ongole'
+      }
+      const ulElement = <ul>
+        <li>Name: {user.name}</li>
+        <li>Age: {user.age}</li>
+        <li>Married: {user.married}</li>
+        <li>Designation: {user.designation}</li>
+        <li>City: {user.city}</li>
+      </ul>
+  
+      ReactDOM.render(ulElement, document.getElementById("objects"));
+
+  
+
+  </script>
+  
+
+  
+</body>
+</html>
