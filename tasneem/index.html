@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Components | Tasneem</title>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/jsx">
+    const domElement = document.getElementById("app");
+    function HomePage() {
+        return <div>
+        <Header />
+        <Footer />
+    </div>
+    }
+    function Header() {
+        return <header>
+            <Logo />
+            <Title />
+            <Nav />
+            <Article />
+        </header>
+
+    }
+    function Footer() {
+        return <footer> Create a Page for a celebrity, brand or business.
+        </footer>
+
+    }
+    function Logo() {
+        return <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"/>
+
+    }
+    function Title() {
+        return <h1>Facebook helps you connect and share with the people in your life.
+        </h1>
+
+    }
+    function Nav() {
+        return <div>
+            <button>Enter Your  Email Address</button>
+            <button>Enter Your Password</button>
+            <button>Click to Login</button>
+        </div>
+        }
+    function Article() {
+        return <section> This is Facebook Page </section>
+
+    }
+    ReactDOM.render(<HomePage />, domElement);
+
+</script>
+
+
+</body>
+</html>
