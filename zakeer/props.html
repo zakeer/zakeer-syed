@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReactJS Props and State</title>
+</head>
+<body>
+  
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/jsx">
+
+    function Welcome({user}) {
+      console.log(":: Welcome Props ::", user);
+      return <li>Welcome { user ? user : "NO USER DEFINED" }</li>
+    }
+
+    function UsersList() {
+
+      const friends = ["Harish", "Harsha", "Yasir", "Syed", "Mohammad", "Muskan", "Arshiya"];
+      // [<Welcome user="Harish" />, <Welcome user="Harsha" />, <Welcome user="Yasir" />, <Welcome user="Syed" />];
+
+      
+      const userAge = 30;
+
+      
+      return <ul>
+          <Welcome user="Zakeer"  />
+          <Welcome user="Tasneem"  />
+          <Welcome user="Samina"  />
+          <Welcome  />
+
+          <hr />
+
+          { friends.map( function(value, idx) {
+            return <Welcome key={value} user={value} />
+          } ) }
+
+          <hr />
+
+          { friends.map( (value, idx) => { return <Welcome key={value} user={value} /> } ) }
+
+          <hr />
+
+          { friends.map( friend => <Welcome key={friend} user={friend} /> ) }
+
+          <h1>Syed Zakeer {userAge}</h1>
+        </ul>
+    }
+
+    ReactDOM.render( <UsersList />, document.getElementById("root") );
+
+  </script>
+
+</body>
+</html>

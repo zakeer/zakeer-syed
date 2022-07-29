@@ -17,10 +17,11 @@
   <script type="text/jsx">
     const domElement = document.getElementById("app");
 
-    function Header() {
+    function Header(props) {
+      console.log(props);
       return <header>
         <Logo></Logo> 
-        <Title /> 
+        <Title title={props.title} /> 
         <Nav></Nav>
       </header>
     }
@@ -29,8 +30,9 @@
       return <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Nextjs-logo.svg/800px-Nextjs-logo.svg.png" />
     }
 
-    function Title() {
-      return <h1>NextJS Training</h1>
+    function Title(props) {
+      console.log("Title props", props);
+      return <h1>{props.title}</h1>
     }
 
     function Nav() {
@@ -51,7 +53,7 @@
 
     function HomePage() {
       return <div>
-        <Header />
+        <Header title="REACTJS Learning" logo="image.png" />
         <Article />
         <Footer />
       </div>
