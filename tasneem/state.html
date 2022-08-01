@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React State | Tasneem</title>
+</head>
+<body>
+    <div id="root"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+  <script type="text/jsx">
+  
+    function HomePage() {
+      const [count, setCount] = React.useState(0);
+        function handleClick() {
+          console.log("BUtton like clicked");
+          setCount( count + 1 );
+        
+        }
+        return  <div>
+          <img src = "https://www.plantsguru.com/image/cache/data/Flowering%20Plants/Rose/plantsguru-flowering-plants-rose-red-600x600.jpg"/>
+          <p>Likes: {count}</p>
+          <button onClick = { handleClick } >Like</button>
+        </div>
+
+      
+    }
+      ReactDOM.render(<HomePage />, document.getElementById("root"));
+
+  </script>
+
+</body>
+</html>
