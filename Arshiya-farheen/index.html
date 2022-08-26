@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Component |Arshiya</title>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+  <script type="text/jsx">
+    const domElement = document.getElementById("app");
+
+    function Header() {
+      return <header>
+        <Logo></Logo> 
+        <Title /> 
+        <Nav></Nav>
+      </header>
+    }
+
+    function Logo() {
+      return <img src="https://image.shutterstock.com/image-illustration/solar-system-planets-orbiting-sun-260nw-2190828831.jpg" />
+    }
+
+    function Title() {
+      return <h1>Universal planets</h1>
+    }
+
+    function Nav() {
+      return <ul>
+        <li>Earth</li>
+        <li>Mars </li>
+        <li>Jupiter</li>
+        <li>Mercury</li>
+        <li>venus</li>
+        <li>saturn</li>
+        <li>Uranus</li>
+        <li>Neptune</li>
+      </ul>
+    }
+
+    function Article() {
+      return <section>This is article section</section>
+    }
+
+    function Footer() {
+      return (<footer>This is footer section</footer>)
+    }
+
+    function HomePage() {
+      return <div>
+        <Header />
+        <Article />
+        <Footer />
+      </div>
+    }
+
+    
+    ReactDOM.render(<HomePage />, domElement);
+  </script>
+</body>
+</html>
